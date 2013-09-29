@@ -71,18 +71,18 @@ window.Remixer = (function() {
 
   };
 
-  Remixer.prototype.buildSegmentGroups = function(segments) {
-    var groupedSegments = new Array();
+  // Remixer.prototype.buildSegmentGroups = function(segments) {
+  //   var groupedSegments = new Array();
 
-    var segmentGroup;
-    var track;
-    _.each(segments, function(el, i) {
-      if el.
+  //   var segmentGroup;
+  //   var track;
+  //   _.each(segments, function(el, i) {
+  //     if el.
 
-    });
+  //   });
 
-    return groupedSegments;
-  };
+  //   return groupedSegments;
+  // };
 
 // Play the remixed song.
 
