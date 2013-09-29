@@ -1,7 +1,7 @@
 window.Remixer = (function() {
 
-  function Remixer(apiKey) {
-    this.apiKey = apiKey;
+  function Remixer() {
+    this.apiKey = "FPLTBQBYRKMKVH6BL";
     this.songs = new Array();
     this.remixed = new Array();
     this.init();
@@ -57,7 +57,7 @@ window.Remixer = (function() {
     var remixed = this.remixed;
     var numberOfBeats = _.min(this.songs, function(song, index) {
       return song.analysis.beats.length;
-    });
+    }).analysis.beats.length;
 
     for (var i = 0; i < numberOfBeats; i++) {
       if (i % 4 == 0 || i % 4 == 2) {
@@ -71,11 +71,25 @@ window.Remixer = (function() {
 
   };
 
+  Remixer.prototype.buildSegmentGroups = function(segments) {
+    var groupedSegments = new Array();
+
+    var segmentGroup;
+    var track;
+    _.each(segments, function(el, i) {
+      if el.
+
+    });
+
+    return groupedSegments;
+  };
+
 // Play the remixed song.
 
   Remixer.prototype.play = function() {
+    var flattenedRemix = _.flatten(this.remixed);
     this.player.stop();
-    this.player.play(0, this.remixed);
+    this.player.play(0, flattenedRemix);
   };
 
 // Pause the song currently playing.
@@ -87,3 +101,5 @@ window.Remixer = (function() {
   return Remixer;
 
 })(this);
+
+window.remixer = new Remixer();
